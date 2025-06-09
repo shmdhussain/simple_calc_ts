@@ -17,6 +17,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@typescript/native-preview": "^7.0.0-dev.20250609.1",
     "prettier": "^3.5.3",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",

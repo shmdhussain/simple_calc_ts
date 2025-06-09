@@ -1,4 +1,7 @@
+import { version } from "./version";
+
 export { add } from "./add";
 export { sub } from "./sub";
 
-export { version } from "./version";
+let calc_version: number = version;
+export { calc_version };
