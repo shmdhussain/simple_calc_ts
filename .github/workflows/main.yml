@@ -11,10 +11,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Publish
+      - name: build
+        run: |
+          npm ci --ignore-scripts
+          npm run build
+      - name: publish
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
-          npm run build
           npm publish --ignore-scripts
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
